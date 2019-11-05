@@ -50,5 +50,11 @@ public String obtenerFecha() {
 }
 
 
+public void fijarFecha (int dia, int mes, int año){
+
+
+}
+
+
 
 }
