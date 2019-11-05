@@ -7,11 +7,11 @@
  */
 public class CalendarioBasico{
     
-  // Dia 
+ // Dia 
     private int dia;
-    // Mes
+ // Mes
     private int mes;
-    // Año
+ // Año
     private int año;
     
    /**
@@ -26,8 +26,26 @@ public class CalendarioBasico{
 public String obtenerFecha() {
     
  String fechaCompleta = "" ; 
+ String diaActual="";
+ String mesActual= "" ; 
+ String añoActual= "" ; 
  
- return fechaCompleta = fechaCompleta + dia + mes + año; 
+  if(dia< 2 ){
+      diaActual =  "0" + dia + "-";
+    }
+    
+  if (mes <2){
+    
+    mesActual = "0"  + mes + "-";
+    
+    }
+    
+  if (año <2) {
+    añoActual =  "0" +año;
+    
+    }
+ 
+ return fechaCompleta= diaActual+mesActual+añoActual; 
 
 }
 
