@@ -23,7 +23,13 @@ public class CalendarioBasico{
    año = 1 ;
 }
 
+public String obtenerFecha() {
+    
+ String fechaCompleta = "" ; 
+ 
+ return fechaCompleta = fechaCompleta + dia + mes + año; 
 
+}
 
 
 
