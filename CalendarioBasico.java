@@ -23,37 +23,66 @@ public class CalendarioBasico{
    año = 1 ;
 }
 
-public String obtenerFecha() {
-    
- String fechaCompleta = "" ; 
+public String obtenerFecha() { 
  String diaActual="";
  String mesActual= "" ; 
  String añoActual= "" ; 
  
-  if(dia< 2 ){
-      diaActual =  "0" + dia + "-";
+  if(dia < 10 ){
+      diaActual =  "0" + this.dia ;
+    }
+    else {
+      diaActual= this.dia + "";
     }
     
-  if (mes <2){
+  if (mes <10){
     
-    mesActual = "0"  + mes + "-";
+    mesActual = "0"  + this.mes ;
+    
+    }
+    else{
+     mesActual= this.mes + "" ;
     
     }
     
-  if (año <2) {
-    añoActual =  "0" +año;
+  if (año <10) {
+    añoActual =  "0" +this.año;
     
+    }
+   else{
+    añoActual = this.año + "";
     }
  
- return fechaCompleta= diaActual+mesActual+añoActual; 
+ return diaActual + "-" +mesActual+ "-" + añoActual; 
 
 }
 
-
-public void fijarFecha (int dia, int mes, int año){
-
-
+public void fijarFecha (int nuevoDia, int nuevoMes, int nuevoAño){
+    this.dia = nuevoDia;
+    this.mes= nuevoMes;
+    this.año= nuevoAño;
 }
+
+public void avanzarFecha(){
+    this.dia++; 
+   if (this.dia== 31){
+        this.dia=1;
+    }
+    this.mes++;
+    
+    if (this.mes==12){
+        this.mes=1;
+   }
+   this.año++;
+   if(this.año==100){
+        this.dia=1;
+        this.mes=1;
+        this.año=1;
+        
+    }
+ }
+
+
 
 
 
